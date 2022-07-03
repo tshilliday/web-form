@@ -109,7 +109,7 @@
               <div class="relative flex-grow pb-6">
                 <div class="flex items-center w-full">
                   <div
-                    class="border-0 border-b border-solid border-black border-error text-base text-black font-medium w-full px-0"
+                    class="border-0 border-b border-solid border-black border-error text-base text-black font-medium w-full px-0 pb-0.5"
                   >
                     <select
                       class="form-control w-full bg-transparent"
