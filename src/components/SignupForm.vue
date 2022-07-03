@@ -1,165 +1,152 @@
+<!-- ***********
+      ITEMS TO COMPLETE
+     *********** 
+      
+1). All placeholder animations and get the placeholder to stay above the text (3/4 COMPLETE)
+2). Font and sizing installed (COMPLETE)
+3). Get correct thank you message displaying !important (COMPLETED)
+4). Get all other minor animations on (INCOMPLETE)
+5). Error message displaying on incorrect/invalid form options (INCOMPLETE) 
+6). Test responsiveness (COMPLETE)
+7) Get Git commit pushed and ready
+8). Email to explain things done and things missed
+9). Dropdown to displace correct styling (INCOMPLETE)
+10). Show hidden field when order number is selected on the drodown (INCOMPLETE)
+       -->
+
 <template>
+  <div class="success" v-if="savingSuccessful">
+    <span
+      class="block overflow-hidden flex flex-col items-center text-center pb-6"
+    >
+      <span class="relative block">
+        <h1 class="text-6xl font-black py-6 pt-16">Thank You!</h1>
+        <p class="text-xl pb-16 font-medium">
+          Our Customer Services department will be in touch.
+        </p>
+      </span>
+    </span>
+  </div>
 
-
-
-
-
-
-  <div class="flex flex-col w-full h-full min-h-screen">
-            <!-- Add Grid -->
-            <div class="flex-1 grid grid-cols-6 md:grid-cols-12 px-2 py-4">
-                <!-- add main area -->
+  <form class="" @submit.prevent="handleSumbit" v-if="!savingSuccessful">
+    <div class="flex flex-col w-full h-full min-h-screen">
+      <!-- Add Grid -->
+      <div class="flex-1 grid grid-cols-6 md:grid-cols-12 px-2 py-4">
+        <!-- add main area -->
+        <div
+          class="col-span-6 col-start-1 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3 flex flex-col"
+        >
+          <span
+            class="block overflow-hidden flex flex-col items-center text-center pb-6"
+          >
+            <span class="relative block">
+              <h1 class="text-6xl font-black py-6 pt-16">Contact Us</h1>
+              <p class="text-xl pb-16 font-medium">
+                If you have an enquiry regarding the online shop or a general
+                enquiry for our Customer Services department, please contact us
+                either by completing the form below or by using Live Chat.
+              </p>
+            </span>
+          </span>
+          <div
+            class="grid flex-row w-full grid-cols-1 lg:grid-cols-2 md:gap-10"
+          >
+            <div class="flex-grow pb-12">
+              <!-- FIRST NAME AREA -->
+              <div class="relative flex w-full">
                 <div
-                    class="col-span-6 col-start-1 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3 flex flex-col">
-                    <span class="block overflow-hidden flex flex-col items-center text-center pb-6">
-                        <span
-                            class="relative block">
-                            <h1 class="text-3xl font-bold py-8">Contact usss</h1>
-                            <p class="py-8">If you have an enquiry regarding the online shop or a general
-                                enquiry for our Customer
-                                Services department, please contact us either by completing the form below or by using
-                                Live Chat.</p>
-                        </span>
-                    </span>
-                    <div class="">
-
-
-
-
-
-                        <form class="grid flex-row w-full grid-cols-1 lg:grid-cols-2 md:gap-8" action="">
-                            <div class="flex-grow pb-6">
-                                <!-- FIRST NAME AREA -->
-                                <div class="relative flex w-full">
-                                    <div
-                                        class="flex border-0 border-b border-solid border-error text-base text-black font-medium w-full py-1 px-0">
-
-                                        <input class="outline-none w-full bg-transparent" type="text">
-                                        <span
-                                            class="absolute left-0 duration-300 pointer-events-none placeholder opacity-60 transition-bottom ease-1 bottom-1 text-black text-base">First
-                                            Name</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex-grow pb-6">
-                                <!-- LAST NAME AREA -->
-                                <div class="relative flex w-full">
-                                    <div
-                                        class="flex border-0 border-b border-solid border-error py-1 bg-transparent text-base text-black font-medium w-full py-1 px-0">
-                                        <input class="outline-none w-full bg-transparent" type="text">
-                                        <span
-                                            class="absolute left-0 duration-300 pointer-events-none placeholder opacity-60 transition-bottom ease-1 bottom-1 text-black text-base">Last
-                                            Name</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex-grow pb-6">
-                                <!-- EMAIL AREA -->
-                                <div class="relative flex w-full">
-                                    <div
-                                        class="flex border-0 border-b border-solid border-error py-1 text-base text-black font-medium w-full py-1 px-0">
-                                        <input class="outline-none w-full bg-transparent" type="email" name="" id="">
-                                    </div>
-                                    <span
-                                        class="absolute left-0 duration-300 pointer-events-none placeholder opacity-60 transition-bottom ease-1 bottom-1 text-black text-base">Email
-                                        Address*</span>
-                                </div>
-                            </div>
-                            <div class="relative flex-grow pb-6">
-                                <!-- ENQUIRY TYPE -->
-                                <div class="relative flex-grow pb-6">
-                                    <div class="flex items-center w-full">
-                                        <div class="relative select-input w-full cursor-pointer">
-                                            <label
-                                                class="absolute text-base bottom-1 left-0 opacity-60 transform duration-400 ease-ease-1"
-                                                for="">Enquiry Type*</label>
-                                            <div
-                                                class="transform absolute w-2 h-2 -translate-y-1/2 right-0.5 top-1/2 transform transform-all ease-ease-1 duration-300">
-                                            </div>
-                                            <input
-                                                class=" bg-transparent pointer-events-none text-base text-black font-medium w-full py-1 px-0 outline-none"
-                                                type="select" name="" id="">
-                                            <div class="w-full bg-black h-divider"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex-grow lg:col-span-2 pb-6">
-                                MAIN MESSAGE
-                            </div>
-                            <div class="flex-grow pb-6 lg:col-start-2">
-                                Button
-                            </div>
-                        </form>
-                    </div>
+                  class="border-0 border-b border-solid border-black border-error text-base text-black font-medium w-full px-0"
+                >
+                  <input
+                    class="form-control w-full bg-transparent"
+                    placeholder="First Name*"
+                    type="text"
+                    required
+                    v-model="firstName"
+                  />
+                  <label class="form-label">First Name*</label>
                 </div>
-
+              </div>
+            </div>
+            <div class="flex-grow pb-12">
+              <!-- LAST NAME AREA -->
+              <div class="relative flex w-full">
+                <div
+                  class="border-0 border-b border-solid border-black border-error text-base text-black font-medium w-full px-0"
+                >
+                  <input
+                    class="form-control w-full bg-transparent"
+                    placeholder="Last Name*"
+                    type="text"
+                    required
+                    v-model="lastName"
+                  />
+                  <label class="form-label">Last Name*</label>
+                </div>
+              </div>
             </div>
 
+            <div class="flex-grow pb-12">
+              <!-- EMAIL AREA -->
+              <div class="relative flex w-full">
+                <div
+                  class="border-0 border-b border-solid border-black border-error text-base text-black font-medium w-full px-0"
+                >
+                  <input
+                    class="form-control w-full bg-transparent"
+                    placeholder="Email Address*"
+                    type="email"
+                    required
+                    v-model="email"
+                  />
+                  <label class="form-label">Email Address*</label>
+                </div>
+              </div>
+            </div>
 
+            <div class="relative flex-grow pb-12">
+              <!-- ENQUIRY TYPE -->
+              <div class="relative flex-grow pb-6">
+                <div class="flex items-center w-full">
+                  <div
+                    class="border-0 border-b border-solid border-black border-error text-base text-black font-medium w-full px-0"
+                  >
+                    <select
+                      class="form-control w-full bg-transparent"
+                      placeholder="Enquiry Type*"
+                      v-model="enquiry"
+                    >
+                      <option value="deliveries">Deliveries</option>
+                      <option value="orders">Orders</option>
+                      <option value="payments">Payments</option>
+                      <option value="stock">Products/Stock</option>
+                      <option value="return">Returns</option>
+                      <option value="shipping">Shipping</option>
+                      <option value="promotion">Promotion</option>
+                      <option value="technical">Website/Technical</option>
+                    </select>
+                    <label class="form-label">Enquiry type*</label>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        </div>
+            <div class="flex-grow lg:col-span-2 pb-6">
+              <textarea
+                v-model="message"
+                rows="10"
+                placeholder="Write your message here*"
+                required
+              ></textarea>
+            </div>
+            <div class="flex-grow pb-6 lg:col-start-2">
+              <button class="text-left" id="submit">Submit</button>
+            </div>
 
+            <!-- v-model binds the data in both directions -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <form @submit.prevent="handleSumbit">
-
-<label>First Name*</label>
-<input type="text" required v-model="firstName">
-
-<label>Last Name*</label>
-<input type="text" required v-model="lastName">
-
-<label>Email Address*</label>
-<input type="email" required v-model="email">
-
-
-<label>Enquiry type*</label>
-<select v-model="enquiry">
-  <option value="deliveries">Deliveries</option>
-  <option value="orders">Orders</option>
-  <option value="payments">Payments</option>
-  <option value="stock">Products/Stock</option>
-  <option value="return">Returns</option>
-  <option value="shipping">Shipping</option>
-  <option value="promotion">Promotion</option>
-  <option value="technical">Website/Technical</option>
-</select>
-
-
-<label>Message*</label>
-
-<textarea v-model="message" rows="10" required></textarea>
-
-
-
-<button id="submit">
-  Submit
-</button>
-
-
-
-
-<!-- v-model binds the data in both directions -->
-
-
-
-<!-- Testing output on page -->
-    <!-- <p>
+            <!-- Testing output on page -->
+            <!-- <p>
 First Name: {{ firstName }}
   </p>
   
@@ -177,90 +164,130 @@ Enquiry: {{ enquiry }}
   <p>
 Message: {{ message }}
   </p> -->
-  
+          </div>
+        </div>
+      </div>
+    </div>
   </form>
-
-
-
-
 </template>
 
 <script>
-
-
-
 export default {
   data() {
     // this tracks the input and stores them
     return {
-      firstName: '',
-      lastName: '',
-      email: '', 
-      enquiry: '',
-      message: ''
-    }
+      firstName: "",
+      lastName: "",
+      email: "",
+      enquiry: "",
+      message: "",
+      savingSuccessful: false,
+    };
   },
-methods: {
-  handleSumbit() {
-    console.log('form submitted')
-    console.log('First Name: ', this.firstName)
-    console.log('Last Name: ', this.lastName)
-    console.log('Email Address: ', this.email)
-    console.log('Enquiry: ', this.enquiry)
-    console.log('Message: ', this.message)
-    alert('Thank you. We will get back to you as soon as possible')
-  }
-} 
-
-}
-
- 
-
-
+  methods: {
+    handleSumbit() {
+      console.log("form submitted");
+      console.log("First Name: ", this.firstName);
+      console.log("Last Name: ", this.lastName);
+      console.log("Email Address: ", this.email);
+      console.log("Enquiry: ", this.enquiry);
+      console.log("Message: ", this.message);
+      // alert("Thank You! Our Customer Services department will be in touch.");
+      this.savingSuccessful = true;
+    },
+  },
+};
 </script>
 
-
-
-
 <style>
-form {
-/* max-width: 420px;
-margin: 30px auto;
-background: transparent;
-text-align: center;
-padding: 40px;
-border-radius: 10px; */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap");
+
+html,
+body {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.01em;
 }
 
-/* label {
-    color: #000;
-    display: inline block;
-    margin: 25px 0 15px;
-    font-size: 0.6em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
+#app {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.01em;
 }
 
-input, select, textarea {
-    display: block;
-    padding: 10px 6px;
-    width: 100%;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 1px solid ddd;
-    color: #555;
-     resize: none;
+input,
+select {
+  display: block;
+  padding: 10px 6px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid ddd;
+  /* color: #555; */
+  resize: none;
+  background: transparent;
 }
 
-#submit  {
-  background: black;
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  resize: none;
+  background: transparent;
+  padding: 15px !important;
+}
+
+#submit {
+  width: 100%;
+  background: rgb(44, 44, 44);
   border: 0;
   padding: 10px 20px;
   margin-top: 20px;
   color: white;
-} */
+}
 
+#submit:hover {
+  background: black;
+}
 
+.form-label {
+  font-size: 1em;
+  display: block;
+  opacity: 1;
+  transform: translateY(-1em);
+  transform-origin: 0 0;
+  transition: all 0.3s;
+  pointer-events: none;
+  line-height: 8px;
+  font-weight: 300;
+}
 
+.form-control {
+  box-shadow: none;
+  border-radius: 0px;
+  border-color: #ccc;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.form-control::placeholder {
+  color: transparent;
+}
+
+textarea::placeholder {
+  color: black !important;
+  font-weight: 300;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.form-control:focus + .form-label {
+  transform: translateY(-2.5em);
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+  transform: translateY(-2.5em);
+}
 </style>
