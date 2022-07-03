@@ -234,6 +234,7 @@ textarea {
   background: transparent;
   padding: 15px !important;
   outline: none !important;
+  min-height: 220px;
 }
 
 #submit {
