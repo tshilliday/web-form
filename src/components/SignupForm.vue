@@ -233,6 +233,7 @@ textarea {
   resize: none;
   background: transparent;
   padding: 15px !important;
+  outline: none !important;
 }
 
 #submit {
