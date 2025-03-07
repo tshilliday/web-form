@@ -1,12 +1,12 @@
 <!-- ***********
       ITEMS TO COMPLETE
-     *********** 
-      
+     ***********
+
 1). All placeholder animations and get the placeholder to stay above the text (3/4 COMPLETE)
 2). Font and sizing installed (COMPLETE)
 3). Get correct thank you message displaying !important (COMPLETED)
 4). Get all other minor animations on (INCOMPLETE)
-5). Error message displaying on incorrect/invalid form options (INCOMPLETE) 
+5). Error message displaying on incorrect/invalid form options (INCOMPLETE)
 6). Test responsiveness (COMPLETE)
 7) Get Git commit pushed and ready
 8). Email to explain things done and things missed
@@ -34,7 +34,7 @@
       <div class="flex-1 grid grid-cols-6 md:grid-cols-12 px-2 py-4">
         <!-- add main area -->
         <div
-          class="col-span-6 col-start-1 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3 flex flex-col"
+          class="col-span-6 col-start-1 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3 flex flex-col bg-red-500"
         >
           <span
             class="block overflow-hidden flex flex-col items-center text-center pb-6"
@@ -149,7 +149,7 @@
             <!-- <p>
 First Name: {{ firstName }}
   </p>
-  
+
     <p>
 Last Name: {{ lastName }}
   </p>
