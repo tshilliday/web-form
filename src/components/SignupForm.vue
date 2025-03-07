@@ -34,7 +34,7 @@
       <div class="flex-1 grid grid-cols-6 md:grid-cols-12 px-2 py-4">
         <!-- add main area -->
         <div
-          class="col-span-6 col-start-1 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3 flex flex-col bg-green-500"
+          class="col-span-6 col-start-1 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3 flex flex-col"
         >
           <span
             class="block overflow-hidden flex flex-col items-center text-center pb-6"
